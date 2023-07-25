@@ -30,6 +30,15 @@ echo -n "Changing to the $dir directory ..."
 cd $dir
 echo "done"
 
+DOTFILES=$HOME/.dotfiles
+
+STOW_FILES="personal,personal/.tauri"
+for folder in $(echo $STOW_FILES | sed "s/,/ /g")
+do
+    echo "loading $folder"
+ done
+
+
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
     echo "Clearn old files"
      mv ~/.gitconfig $olddir/.gitconfig
