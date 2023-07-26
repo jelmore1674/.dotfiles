@@ -84,6 +84,7 @@ require('lazy').setup({
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
+      current_line_blame = true,
       -- See `:help gitsigns.txt`
       signs = {
         add = { text = '+' },
@@ -291,7 +292,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'bash', 'dockerfile', 'css', 'diff', 'gitignore', 'html', 'jsdoc', 'javascript', 'lua', 'scss',
-    'rust', 'sql', 'toml', 'tsx', 'typescript', 'yaml',
+    'rust', 'sql', 'toml', 'tsx', 'typescript', 'yaml', 'markdown',
     'vimdoc', 'vim' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)

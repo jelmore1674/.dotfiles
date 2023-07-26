@@ -3,5 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-    'MunifTanjim/prettier.nvim'
+    'MunifTanjim/prettier.nvim',
+    'nvim-tree/nvim-web-devicons',
+    'sindrets/diffview.nvim'
 }
