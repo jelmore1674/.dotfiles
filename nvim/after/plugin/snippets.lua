@@ -30,5 +30,4 @@ ls.add_snippets("all", {
     s("clv", {
         t("console.log({"), i(1, "variable"), t("});")
     })
-
 })
