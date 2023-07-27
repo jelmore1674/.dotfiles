@@ -1,3 +1,4 @@
 */.ssh/** filter=git-crypt diff=git-crypt
 */.tauri/** filter=git-crypt diff=git-crypt
 */.yarnrc filter=git-crypt diff=git-crypt
+work/* filter=git-crypt diff=git-crypt
