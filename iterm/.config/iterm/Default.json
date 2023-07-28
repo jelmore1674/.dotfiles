@@ -17,30 +17,25 @@
     "Blue Component" : 0.3333333432674408,
     "Red Component" : 0.3333333432674408
   },
-  "Draw Powerline Glyphs" : true,
-  "Bold Color" : {
-    "Green Component" : 1,
-    "Blue Component" : 1,
-    "Red Component" : 1
-  },
   "Ansi 9 Color" : {
     "Green Component" : 0.3333333432674408,
     "Blue Component" : 0.3333333432674408,
     "Red Component" : 1
   },
-  "Ansi 5 Color" : {
-    "Green Component" : 0,
-    "Blue Component" : 0.73333334922790527,
-    "Red Component" : 0.73333334922790527
+  "Bold Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 1,
+    "Red Component" : 1
   },
-  "Ansi 6 Color" : {
+  "Guid" : "91475B58-C2A1-4B29-9852-2B9975F03A00",
+  "Ansi 2 Color" : {
     "Green Component" : 0.73333334922790527,
-    "Blue Component" : 0.73333334922790527,
+    "Blue Component" : 0,
     "Red Component" : 0
   },
   "Rows" : 25,
   "Default Bookmark" : "No",
-  "Blend" : 0.45006368885869569,
+  "Blend" : 1,
   "Non-ASCII Anti Aliased" : true,
   "Use Bright Bold" : true,
   "Ansi 10 Color" : {
@@ -48,6 +43,7 @@
     "Blue Component" : 0.3333333432674408,
     "Red Component" : 0.3333333432674408
   },
+  "Prevent Opening in a Tab" : false,
   "Ambiguous Double Width" : false,
   "Jobs to Ignore" : [
     "rlogin",
@@ -61,13 +57,11 @@
     "Red Component" : 1
   },
   "Foreground Color" : {
-    "Red Component" : 1,
-    "Color Space" : "sRGB",
-    "Blue Component" : 1,
-    "Alpha Component" : 1,
-    "Green Component" : 1
+    "Green Component" : 0.73333334922790527,
+    "Blue Component" : 0.73333334922790527,
+    "Red Component" : 0.73333334922790527
   },
-  "Working Directory" : "\/Users\/justin",
+  "Working Directory" : "\/Users\/jelmore",
   "Blinking Cursor" : false,
   "Disable Window Resizing" : true,
   "Sync Title" : false,
@@ -82,19 +76,18 @@
     "Blue Component" : 1,
     "Red Component" : 0.70980000495910645
   },
-  "Only The Default BG Color Uses Transparency" : true,
+  "Only The Default BG Color Uses Transparency" : false,
   "Columns" : 1000,
   "Idle Code" : 0,
-  "Hide After Opening" : false,
+  "Background Image Mode" : 2,
   "Ansi 13 Color" : {
     "Green Component" : 0.3333333432674408,
     "Blue Component" : 1,
     "Red Component" : 1
   },
   "Custom Command" : "No",
-  "Use Custom Window Title" : false,
   "ASCII Anti Aliased" : true,
-  "Non Ascii Font" : "JetBrainsMonoNF-Regular 12",
+  "Non Ascii Font" : "Monaco 12",
   "Vertical Spacing" : 1,
   "Use Bold Font" : true,
   "Option Key Sends" : 0,
@@ -278,12 +271,10 @@
       "Text" : "[1;2P"
     }
   },
-  "Window Type" : 0,
-  "Blur Radius" : 25.063198138297874,
-  "Cursor Type" : 2,
-  "Background Image Location" : "",
-  "Blur" : false,
-  "Cursor Boost" : 0,
+  "Window Type" : 9,
+  "Blur Radius" : 25.319679552443489,
+  "Background Image Location" : "~/.config/iterm/red-skull-flowers-black-background-4k_1540750655.jpg",
+  "Blur" : true,
   "Scrollback Lines" : 1000,
   "Send Code When Idle" : false,
   "Close Sessions On End" : true,
@@ -296,36 +287,20 @@
     "Blue Component" : 1,
     "Red Component" : 0.3333333432674408
   },
-  "ASCII Ligatures" : true,
   "Name" : "Default",
   "Cursor Text Color" : {
     "Green Component" : 1,
     "Blue Component" : 1,
     "Red Component" : 1
   },
-  "Minimum Contrast" : 0,
-  "Shortcut" : "",
+  "Shortcut" : "0",
   "Cursor Color" : {
     "Green Component" : 0.73333334922790527,
     "Blue Component" : 0.73333334922790527,
     "Red Component" : 0.73333334922790527
   },
   "Ansi 0 Color" : {
-    "Red Component" : 0,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0,
-    "Alpha Component" : 1,
-    "Green Component" : 0
-  },
-  "Guid" : "A9C18A62-FEED-4070-9052-D0844A61C228",
-  "Horizontal Spacing" : 1,
-  "Ansi 3 Color" : {
-    "Green Component" : 0.73333334922790527,
-    "Blue Component" : 0,
-    "Red Component" : 0.73333334922790527
-  },
-  "Ansi 2 Color" : {
-    "Green Component" : 0.73333334922790527,
+    "Green Component" : 0,
     "Blue Component" : 0,
     "Red Component" : 0
   },
@@ -335,15 +310,29 @@
     "Red Component" : 0.73333334922790527
   },
   "Custom Directory" : "No",
-  "Transparency" : 0.19607481424106163,
-  "Normal Font" : "JetBrainsMonoNF-Regular 13",
-  "Ansi 4 Color" : {
-    "Red Component" : 0.0778656005859375,
-    "Color Space" : "sRGB",
-    "Blue Component" : 1,
-    "Alpha Component" : 1,
-    "Green Component" : 0.58480313327163458
+  "Ansi 3 Color" : {
+    "Green Component" : 0.73333334922790527,
+    "Blue Component" : 0,
+    "Red Component" : 0.73333334922790527
   },
+  "Horizontal Spacing" : 1,
   "Right Option Key Sends" : 0,
-  "Use Non-ASCII Font" : true
+  "Ansi 6 Color" : {
+    "Green Component" : 0.73333334922790527,
+    "Blue Component" : 0.73333334922790527,
+    "Red Component" : 0
+  },
+  "Transparency" : 0.27637149891954788,
+  "Normal Font" : "MesloLGMForPowerline-Regular 18",
+  "Ansi 4 Color" : {
+    "Green Component" : 0,
+    "Blue Component" : 0.73333334922790527,
+    "Red Component" : 0
+  },
+  "Ansi 5 Color" : {
+    "Green Component" : 0,
+    "Blue Component" : 0.73333334922790527,
+    "Red Component" : 0.73333334922790527
+  },
+  "Use Non-ASCII Font" : false
 }
