@@ -11,6 +11,13 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- EXIT Gdiff
+keymap("n", "<C-q>", "<C-w><C-o>", opts)
+
+-- Open Diffview
+keymap("n", "<C-d>o", ":DiffviewOpen<CR>", opts)
+keymap("n", "<C-d>c", ":DiffviewClose<CR>", opts)
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
