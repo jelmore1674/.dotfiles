@@ -3,23 +3,21 @@ tap "adoptopenjdk/openjdk"
 tap "facebook/fb"
 tap "fsouza/prettierd"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "homebrew/services"
+tap "sidneys/homebrew"
+tap "supabase/tap"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Manage compile and link flags for libraries
-brew "pkg-config"
 # Cross-platform make
 brew "cmake"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Asynchronous event library
-brew "libevent"
 # Collection of reusable C++ library artifacts developed at Facebook
 brew "folly"
 # Shared library for Watchman and Eden projects
@@ -34,34 +32,36 @@ brew "fbthrift"
 brew "fb303"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
 # Enable transparent encryption/decryption of files in a git repo
 brew "git-crypt"
+# Git extension for versioning large files
+brew "git-lfs"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
-# Network authentication protocol
-brew "krb5"
-# X.509 and CMS library
-brew "libksba"
-# Generic library support script
-brew "libtool"
-# YAML Parser
-brew "libyaml"
-# Node version management
-brew "n"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
-# Library for command-line editing
-brew "readline"
-# Object-relational database system
-brew "postgresql@14"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# General purpose TCP-IP emulator
+brew "libslirp"
+# Node version management
+brew "n"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Object-relational database system
+brew "postgresql@14", restart_service: true
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
+# Emulator for x86 and PowerPC
+brew "qemu"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
@@ -70,6 +70,12 @@ brew "ruby@3.1"
 brew "stow"
 # Programmatically correct mistyped console commands
 brew "thefuck"
+# Simplified and community-driven man pages
+brew "tldr"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Watch files and take action when they change
 brew "watchman"
 # Library to create, extract, and modify Windows Imaging files
@@ -78,14 +84,36 @@ brew "wimlib"
 brew "zlib"
 # A Powerful Command Line for automating iOS Simulators
 brew "facebook/fb/idb-companion"
+# prettier, on SPEED!
+brew "fsouza/prettierd/prettierd"
+# Supabase CLI
+brew "supabase/tap/supabase"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
+# GraphQL client
+cask "altair-graphql-client"
 # Android SDK component
 cask "android-platform-tools"
+# Cross platform SQL editor and database management app
+cask "beekeeper-studio"
+# Web browser focusing on privacy
+cask "brave-browser"
+# Web browser
+cask "firefox"
+# Free and open-source image editor
+cask "gimp"
+# Web browser
+cask "google-chrome"
+# HTTP and GraphQL Client
+cask "insomnia"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Standalone app for debugging React Native apps
 cask "react-native-debugger"
-# Binary releases of VS Code without MS branding/telemetry/licensing
-cask "vscodium"
+# File transfer application
+cask "transmit"
 vscode "aaron-bond.better-comments"
 vscode "aaronthomas.vscode-snazzy-operator"
 vscode "ahmadalli.vscode-nginx-conf"
