@@ -19,7 +19,7 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker docker-compose git zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete rust thefuck ufw yarn tmux)
-
+source ~/.zsh_profile
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -29,7 +29,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
+
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -54,6 +54,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
+alias tmux-sessionizer="~/.local/scripts/tmux-sessionizer.sh"
+
 eval $(thefuck --alias)
 
 prompt_context(){}
@@ -67,6 +69,12 @@ prompt_context() {
     if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
         prompt_segment black default "%(!.%{%F{yellow}%}.)💀"
     fi
+}
+
+prompt_dir() {
+  #prompt_segment blue $CURRENT_FG '%~'
+  prompt_segment blue $CURRENT_FG '%{%F{white}%}%{%K{blue}%}%1~'
+
 }
 
 fpath=(~/.zsh $fpath)
