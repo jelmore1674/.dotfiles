@@ -47,11 +47,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-alias node16='export PATH="/opt/homebrew/bin:$PATH:/opt/homebrew/node@16/bin:$PATH"; node -v'
 export DENO_INSTALL="/Users/justin/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
