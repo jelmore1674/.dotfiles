@@ -20,8 +20,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 keymap("n", "<C-q>", "<C-w><C-o>", opts)
 
 -- Open Diffview
-keymap("n", "<C-d>o", ":DiffviewOpen<CR>", opts)
-keymap("n", "<C-d>c", ":DiffviewClose<CR>", opts)
+keymap("n", "<leader>do", ":DiffviewOpen<CR>", opts)
+keymap("n", "<leader>dc", ":DiffviewClose<CR>", opts)
 
 -- Normal --
 -- Better window navigation
