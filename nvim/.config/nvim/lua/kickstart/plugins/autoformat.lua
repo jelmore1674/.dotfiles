@@ -3,7 +3,6 @@
 -- Use your language server to automatically format your code on save.
 -- Adds additional commands as well to manage the behavior
 
-
 return {
   'neovim/nvim-lspconfig',
   config = function()
@@ -51,10 +50,24 @@ return {
           group = get_augroup(client),
           buffer = bufnr,
           callback = function()
+            -- if format is not enabled, do nothing
             if not format_is_enabled then
               return
             end
 
+            -- import prettier and files prettier formats
+            local prettier = require("prettier")
+            local file_types = require("custom.prettier")
+
+            -- format files in prettier config with prettier
+            for _, prettier_client in ipairs(file_types) do
+              if client.name == prettier_client then
+                prettier.format();
+                return
+              end
+            end
+
+            -- if not in prettier, format file using lsp
             vim.lsp.buf.format {
               async = false,
               filter = function(c)
