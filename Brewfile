@@ -18,6 +18,8 @@ brew "cmake"
 brew "cocoapods"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Asynchronous event library
+brew "libevent"
 # Collection of reusable C++ library artifacts developed at Facebook
 brew "folly"
 # Shared library for Watchman and Eden projects
@@ -44,12 +46,16 @@ brew "git-lfs"
 brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Improved top (interactive process viewer)
 brew "htop"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # General purpose TCP-IP emulator
 brew "libslirp"
+# Language Server Protocol for Markdown
+brew "marksman"
 # Node version management
 brew "n"
 # Fast, highly customisable system info script

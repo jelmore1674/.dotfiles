@@ -29,6 +29,13 @@ The next step is to clone the repo
 brew bundle install --file Brewfile
 ```
 
+## Install npm global packages
+
+There are a few mandatory npm packages. Install them using this.
+```bash
+npm i -g @fsouza/prettierd eslint_d vscode-langservers-extracted
+```
+
 ## Stow
 
 Once the `Brewfile` is installed, stow the directories in the root.
