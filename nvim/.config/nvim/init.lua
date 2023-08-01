@@ -1,9 +1,5 @@
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
+-- import remaps
+require("custom.remap")
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -424,7 +420,6 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Enable the following language servers
 --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
---
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
@@ -435,14 +430,27 @@ local servers = {
   tsserver = {
     capabilities = capabilities
   },
-  eslint = {},
-
+  eslint = {
+    capabilities = capabilities
+  },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
     },
   },
+  html = {
+    provideFormatter = false
+  },
+  cssls = {},
+  bashls = {},
+  graphql = {},
+  jsonls = {},
+  marksman = {},
+  prismals = {},
+  sqlls = {},
+  taplo = {},
+  yamlls = {},
 }
 
 -- Setup neovim lua configuration

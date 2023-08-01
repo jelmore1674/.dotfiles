@@ -1,21 +1,23 @@
 local prettier = require("prettier")
 
+local file_types = {
+    "css",
+    "graphql",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "less",
+    "markdown",
+    "scss",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+}
+
 prettier.setup({
     bin = 'prettierd', -- or `'prettierd'` (v0.23.3+)
-    filetypes = {
-        "css",
-        "graphql",
-        "html",
-        "javascript",
-        "javascriptreact",
-        "json",
-        "less",
-        "markdown",
-        "scss",
-        "typescript",
-        "typescriptreact",
-        "yaml",
-    },
+    filetypes = file_types,
     cli_options = {
         arrow_parens = "always",
         bracket_spacing = true,
@@ -38,4 +40,5 @@ prettier.setup({
     },
 })
 
-vim.keymap.set("n", "<Leader>f", prettier.format)
+return file_types;
+-- vim.keymap.set("n", "<Leader>f", prettier.format)
