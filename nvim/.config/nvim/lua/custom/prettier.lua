@@ -40,5 +40,20 @@ prettier.setup({
     },
 })
 
-return file_types;
--- vim.keymap.set("n", "<Leader>f", prettier.format)
+return {
+    -- css formating lsp servers
+    "cssls",
+    "cssmodules_ls",
+    -- graphql lsp
+    "graphql",
+    -- html lsp
+    "html",
+    -- json lsp
+    "jsonls",
+    -- markdown lsp
+    "marksman",
+    -- js/ts lsp
+    "tsserver",
+    -- yaml lsp
+    "yamlls"
+};
