@@ -1,2 +1,2 @@
 killall zsh
-date > /Users/justin/killzsh.log
+date >/Users/justin/killzsh.log
