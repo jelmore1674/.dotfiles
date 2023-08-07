@@ -32,6 +32,8 @@ brew "wangle"
 brew "fbthrift"
 # Thrift functions for querying information from a service
 brew "fb303"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -72,6 +74,8 @@ brew "qemu"
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby@3.1"
+# Autoformat shell script source code
+brew "shfmt"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Programmatically correct mistyped console commands
