@@ -3,6 +3,18 @@
 -- Use your language server to automatically format your code on save.
 -- Adds additional commands as well to manage the behavior
 
+-- if the client is compatible with prettier
+local is_prettier_formatting = function(client_id)
+  local file_types = require("custom.prettier")
+  -- format files in prettier config with prettier
+  for _, prettier_client in ipairs(file_types) do
+    if not client_id == prettier_client then
+      return false
+    end
+    return true
+  end
+end
+
 return {
   'neovim/nvim-lspconfig',
   config = function()
@@ -41,39 +53,40 @@ return {
 
         -- Only attach to clients that support document formatting
         if not client.server_capabilities.documentFormattingProvider then
-          return
+          if not is_prettier_formatting(client.id) then
+            return
+          end
         end
-
+        --
         -- Create an autocmd that will run *before* we save the buffer.
         --  Run the formatting command for the LSP that has just attached.
         vim.api.nvim_create_autocmd('BufWritePre', {
           group = get_augroup(client),
           buffer = bufnr,
           callback = function()
+            local prettier = require("prettier")
+
+
             -- if format is not enabled, do nothing
             if not format_is_enabled then
+              if is_prettier_formatting(client.name) then
+                prettier.format()
+              end
+              if client.name == "bashls" then
+                vim.cmd("Shfmt")
+              end
               return
             end
 
-            -- import prettier and files prettier formats
-            local prettier = require("prettier")
-            local file_types = require("custom.prettier")
-
-            -- format files in prettier config with prettier
-            for _, prettier_client in ipairs(file_types) do
-              if client.name == prettier_client then
-                prettier.format();
-                return
-              end
-            end
-
-            -- if not in prettier, format file using lsp
             vim.lsp.buf.format {
               async = false,
               filter = function(c)
                 return c.id == client.id
               end,
             }
+
+            prettier.format()
+            -- if not in prettier, format file using lsp
           end,
         })
       end,

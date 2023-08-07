@@ -9,6 +9,7 @@ local file_types = {
     "json",
     "less",
     "markdown",
+    "md",
     "scss",
     "typescript",
     "typescriptreact",
@@ -39,6 +40,8 @@ prettier.setup({
         vue_indent_script_and_style = true,
     },
 })
+
+vim.keymap.set("n", "<leader>pp", ":Prettier<cr>")
 
 return {
     -- css formating lsp servers

@@ -55,6 +55,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 alias tmux-sessionizer="~/.local/scripts/tmux-sessionizer.sh"
+alias wtpkg="~/.local/scripts/worktree-package-installer.sh"
 
 eval $(thefuck --alias)
 
