@@ -67,7 +67,7 @@ return {
             -- Automatically install LSPs to stdpath for neovim
             { 'williamboman/mason.nvim', config = true },
             'williamboman/mason-lspconfig.nvim',
-            --'jose-elias-alvarez/null-ls.nvim',
+            'jose-elias-alvarez/null-ls.nvim',
             'MunifTanjim/prettier.nvim',
             -- Useful status updates for LSP
             -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
