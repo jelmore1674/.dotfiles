@@ -53,6 +53,11 @@ return {
 
         -- Only attach to clients that support document formatting
         if not client.server_capabilities.documentFormattingProvider then
+          if client.name == "bashls" then
+            --  vim.cmd("Shfmt")
+            return
+          end
+
           if not is_prettier_formatting(client.id) then
             return
           end
@@ -71,9 +76,6 @@ return {
             if not format_is_enabled then
               if is_prettier_formatting(client.name) then
                 prettier.format()
-              end
-              if client.name == "bashls" then
-                vim.cmd("Shfmt")
               end
               return
             end

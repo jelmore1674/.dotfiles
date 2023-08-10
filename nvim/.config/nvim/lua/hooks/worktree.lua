@@ -17,12 +17,11 @@ local wtpkg = "~/.local/scripts/worktree-package-installer.sh"
 Worktree.on_tree_change(function(op, metadata)
     if op == Worktree.Operations.Switch then
         os.execute('tmux neww -d -n node-packages bash -c \"cd ' ..
-            metadata.path .. '&& pwd && yarn install  \"')
+            metadata.path .. ' && ' .. wtpkg .. ' \"')
     end
 
     if op == Worktree.Operations.Create then
-        --     os.execute('tmux neww -d -n node-packages bash -c \"' .. wtpkg .. '\"')
         os.execute('tmux neww -d -n node-packages bash -c \"cd ' ..
-            metadata.path .. '&& pwd && yarn install \"')
+            metadata.path .. ' && ' .. wtpkg .. ' \"')
     end
 end)
