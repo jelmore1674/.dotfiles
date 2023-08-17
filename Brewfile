@@ -4,6 +4,7 @@ tap "facebook/fb"
 tap "fsouza/prettierd"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "koekeishiya/formulae"
 tap "sidneys/homebrew"
 tap "supabase/tap"
 # Automatic configure script builder
@@ -96,10 +97,16 @@ brew "zlib"
 brew "facebook/fb/idb-companion"
 # prettier, on SPEED!
 brew "fsouza/prettierd/prettierd"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
 # Supabase CLI
 brew "supabase/tap/supabase"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # GraphQL client
 cask "altair-graphql-client"
 # Android SDK component
@@ -118,6 +125,8 @@ cask "google-chrome"
 cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# GPU-based terminal emulator
+cask "kitty"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Standalone app for debugging React Native apps
