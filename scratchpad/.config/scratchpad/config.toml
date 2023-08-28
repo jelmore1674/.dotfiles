@@ -1,0 +1,29 @@
+scratchpad_space = 8
+launch_timeout = 5
+
+[[scratchpad]]
+name = "discord"
+target_type = "app"
+target = "Discord"
+position = [180, 112]
+size = [1080, 675]
+launch_type = "app"
+launch_command = "Discord.app"
+
+[[scratchpad]]
+name = "finder"
+target_type = "app"
+target = "Finder"
+position = [180, 112]
+size = [1080, 675]
+launch_type = "app"
+launch_command = "Finder.app"
+
+[[scratchpad]]
+name = "notes"
+target_type = "app"
+target = "Notes"
+position = [180, 112]
+size = [1080, 675]
+launch_type = "app"
+launch_command = "Notes.app"
