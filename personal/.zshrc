@@ -18,7 +18,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose git zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete rust thefuck ufw yarn tmux)
+plugins=(git zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete thefuck ufw)
 source ~/.zsh_profile
 source $ZSH/oh-my-zsh.sh
 
@@ -49,8 +49,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export DENO_INSTALL="/Users/justin/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
@@ -87,3 +85,4 @@ alias fly="/Users/justin/dev/reqwest/target/debug/reqwest"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias vimdiff='nvim -d'
 alias vim="nvim"
+source ~/.iterm2_shell_integration.zsh
