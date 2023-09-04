@@ -87,3 +87,14 @@ alias fly="/Users/justin/dev/reqwest/target/debug/reqwest"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias vimdiff='nvim -d'
 alias vim="nvim"
+
+export EDITOR="nvim"
+
+# Created by `pipx` on 2023-08-17 21:03:33
+export PATH="$PATH:/home/justin/.local/bin"
+
+export DPRINT_INSTALL="/home/justin/.dprint"
+source "$HOME/.cargo/env"
+export PATH="$DPRINT_INSTALL/bin:$PATH"
+alias pbcopy='xclip -selection clipboard'
+neofetch
