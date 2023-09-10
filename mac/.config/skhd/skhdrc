@@ -77,3 +77,4 @@ ctrl - e : open -n -a "kitty"
 alt - d : scratchpad --toggle discord
 alt - f : scratchpad --toggle finder
 alt - n : scratchpad --toggle notes
+alt - b : scratchpad --toggle beekeeper

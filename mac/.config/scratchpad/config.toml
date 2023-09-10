@@ -27,3 +27,12 @@ position = [180, 112]
 size = [1080, 675]
 launch_type = "app"
 launch_command = "Notes.app"
+
+[[scratchpad]]
+name = "beekeeper"
+target_type = "app"
+target = "Beekeeper Studio"
+position = [180, 112]
+size = [1080, 675]
+launch_type = "app"
+launch_command = "Beekeeper Studio.app"
