@@ -1,6 +1,7 @@
 [user]
 	name = Justin Elmore
 	email = jelmore1674@pm.me
+	signingkey = jelmore1674@pm.me
 [init]
 	defaultBranch = main
 [color]
@@ -20,3 +21,9 @@
 	prompt = false
 [alias]
 	d = difftool
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgSign = true

@@ -105,3 +105,5 @@ alias wtpkg="~/.local/scripts/worktree-package-installer.sh"
 
 eval $(thefuck --alias)
 neofetch
+
+export GPG_TTY=$(tty)
