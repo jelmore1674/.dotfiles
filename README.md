@@ -83,3 +83,12 @@ To decrypt the repo after getting the key, run the following command
 ```bash
 git-crypt unlock ~/secrety.key
 ```
+
+
+## One last thing
+Remember, this is *highly opinionated*, so things might not work exactly how you expect. But, hey, that's half the fun, right?
+
+## Contributing
+If you think you can make this chaos even better, feel free to open an issue or submit a PR. Just remember, there's a fine line between genius and insanity. Are you up for the challenge?
+
+Happy hacking!
