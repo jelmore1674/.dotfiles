@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+TMP=$(mktemp)
+LOGGED_IN=$(op whoami 2>$TMP)
+err=$(cat "$TMP")
+LOGGED_IN=$(echo $err | rg "ERROR")
+
+if [[ ! -z $LOGGED_IN ]]; then
+	echo "Signing in..."
+	eval $(op signin)
+fi
+
+FILE=$(find . -mindepth 1 -maxdepth 3 -type f | fzf --header "Select a file.")
+VAULT=$(op vault list | awk 'NR>1 {print $2}' | fzf --header "Select a vault.")
+echo "Title"
+read TITLE
+op document create "$FILE" --title "$TITLE" --file-name "$(basename "$FILE")"

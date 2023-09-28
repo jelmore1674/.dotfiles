@@ -89,6 +89,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	export ZSH="$HOME/.oh-my-zsh"
 	export DENO_INSTALL="$HOME/.deno"
 	export PATH="$DENO_INSTALL/bin:$PATH"
+	export PATH=${HOME}/bin/:${HOME}/.local/scripts:${PATH}
 fi
 # Created by `pipx` on 2023-08-17 21:03:33
 
