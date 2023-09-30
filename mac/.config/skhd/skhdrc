@@ -72,7 +72,9 @@ ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 
+shift + alt -r : skhd --restart-service
+
 alt - d : scratchpad --toggle discord
 alt - f : scratchpad --toggle finder
-alt - n : scratchpad --toggle notes
+alt - n : scratchpad --toggle logseq
 alt - b : scratchpad --toggle beekeeper

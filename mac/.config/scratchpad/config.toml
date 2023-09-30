@@ -36,3 +36,12 @@ position = [108, 67]
 size = [1224, 765]
 launch_type = "app"
 launch_command = "Beekeeper Studio.app"
+
+[[scratchpad]]
+name = "logseq"
+target_type = "app"
+target = "Logseq"
+position = [108, 67]
+size = [1224, 765]
+launch_type = "app"
+launch_command = "Logseq.app"
