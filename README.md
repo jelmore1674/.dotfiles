@@ -2,8 +2,8 @@
 
 ## _Prerequisites_
 
--   zsh
--   curl
+- zsh
+- curl
 
 ## Install on-my-zsh
 
@@ -32,6 +32,7 @@ brew bundle install --file Brewfile
 ## Install npm global packages
 
 There are a few mandatory npm packages. Install them using this.
+
 ```bash
 npm i -g @fsouza/prettierd eslint_d vscode-langservers-extracted
 ```
@@ -50,16 +51,6 @@ Then stow either the work or personal configuration.
 
 ```bash
 stow personal
-```
-
-## Configure iTerm
-
-**_Important_**
-
-Install the font in the repo, to do this, just run the following command from the dotfiles directory.
-
-```bash
-open iterm
 ```
 
 ## Login to 1Password
@@ -84,11 +75,12 @@ To decrypt the repo after getting the key, run the following command
 git-crypt unlock ~/secrety.key
 ```
 
-
 ## One last thing
-Remember, this is *highly opinionated*, so things might not work exactly how you expect. But, hey, that's half the fun, right?
+
+Remember, this is _highly opinionated_, so things might not work exactly how you expect. But, hey, that's half the fun, right?
 
 ## Contributing
+
 If you think you can make this chaos even better, feel free to open an issue or submit a PR. Just remember, there's a fine line between genius and insanity. Are you up for the challenge?
 
 Happy hacking!
