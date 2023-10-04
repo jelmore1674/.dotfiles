@@ -79,6 +79,8 @@ return {
         },
     },
 
+    'mhartington/formatter.nvim',
+
     {
         -- Autocompletion
         'hrsh7th/nvim-cmp',

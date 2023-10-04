@@ -10,7 +10,7 @@ vim.g.maplocalleader = ' '
 
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- Move Highlight section
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -46,3 +46,12 @@ keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+keymap("n", "<leader>tw", "<cmd>!tmux neww -d -n \"$(basename $(pwd))\"<CR>", opts)
+keymap("n", "<leader>pd", "<cmd>!dprint fmt %<CR>", opts)
+
+vim.filetype.add({
+    extension = {
+        mdx = 'mdx'
+    }
+})

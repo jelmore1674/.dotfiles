@@ -26,7 +26,7 @@ vim.opt.rtp:prepend(lazypath)
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
-  require 'kickstart.plugins.autoformat',
+ -- require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
 
   { import = 'custom.plugins' },
@@ -96,6 +96,8 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 vim.keymap.set('n', '<leader>gb', require('telescope.builtin').git_branches, { desc = '[G]it [B]ranches' })
 
 -- [[ Configure Treesitter ]]
+local ft_to_parser = require("nvim-treesitter.parsers").filetype_to_parsername
+ft_to_parser.mdx = "markdown"
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
@@ -236,12 +238,13 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
   rust_analyzer = {},
+  --  biome = {},
   tsserver = {
     capabilities = capabilities
   },
-  eslint = {
-    capabilities = capabilities
-  },
+  -- eslint = {
+  -- capabilities = capabilities
+  -- },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
@@ -261,6 +264,7 @@ local servers = {
   marksman = {},
   prismals = {},
   sqlls = {},
+  -- stylelint_lsp = {},
   taplo = {},
   yamlls = {},
 }
@@ -334,6 +338,12 @@ cmp.setup {
   },
 }
 
+local term = os.getenv("TERM")
 
+-- vim.cmd [[
+--  hi Normal ctermbg=NONE
+--  hi NonText ctermbg=NONE
+--  hi Normal guibg=NONE
+--  ]]
 require("hooks.worktree")
 require("custom")

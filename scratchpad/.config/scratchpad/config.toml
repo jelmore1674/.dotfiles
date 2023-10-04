@@ -4,18 +4,18 @@ launch_timeout = 5
 [[scratchpad]]
 name = "discord"
 target_type = "app"
-target = "Discord"
-position = [180, 112]
-size = [1080, 675]
+target = "Google Chat"
+position = [185, 108]
+size = [2190, 1224]
 launch_type = "app"
-launch_command = "Discord.app"
+launch_command = "Google Chat.app"
 
 [[scratchpad]]
 name = "finder"
 target_type = "app"
 target = "Finder"
-position = [180, 112]
-size = [1080, 675]
+position = [185, 108]
+size = [2190, 1224]
 launch_type = "app"
 launch_command = "Finder.app"
 
@@ -23,7 +23,30 @@ launch_command = "Finder.app"
 name = "notes"
 target_type = "app"
 target = "Notes"
-position = [180, 112]
-size = [1080, 675]
+position = [185, 108]
+size = [2190, 1224]
 launch_type = "app"
 launch_command = "Notes.app"
+
+[[scratchpad]]
+name = "transmit"
+target_type = "app"
+target = "Transmit"
+position = [185, 108]
+size = [2190, 1224]
+launch_type = "app"
+launch_command = "Transmit.app"
+
+
+[[scratchpad]]
+name = "wezterm"
+target_type = "title"
+target = "WezTermScratchPad"
+position = [185, 108]
+size = [2190, 1224]
+launch_type = "app_with_arg"
+launch_command = [
+    "WezTerm.app",
+    "--config-file",
+    "Users/jelmore/.config/wezterm/scratch.lua",
+]

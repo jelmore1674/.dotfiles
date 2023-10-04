@@ -2,6 +2,20 @@
 --
 -- Use your language server to automatically format your code on save.
 -- Adds additional commands as well to manage the behavior
+--
+
+
+local function escape_path(arg)
+  return vim.fn.shellescape(arg, true)
+end
+
+local function file_exists(name)
+  local f = io.open(name, 'r')
+  if f ~= nil then
+    return true
+  end
+  return false
+end
 
 -- if the client is compatible with prettier
 local is_prettier_formatting = function(client_id)
@@ -69,27 +83,51 @@ return {
           group = get_augroup(client),
           buffer = bufnr,
           callback = function()
+            local cur_dir = vim.fn.getcwd()
             local prettier = require("prettier")
-
-
-            -- if format is not enabled, do nothing
-            if not format_is_enabled then
-              if is_prettier_formatting(client.name) then
-                prettier.format()
-              end
+            if file_exists(cur_dir .. '/dprint.json') then
+              -- local cur_buf = vim.api.nvim_buf_get_name(0)
+              -- os.execute("dprint fmt " .. escape_path(cur_buf))
+              --  vim.cmd("e!")
               return
             end
 
-            vim.lsp.buf.format {
-              async = false,
-              filter = function(c)
-                return c.id == client.id
-              end,
-            }
+            -- if format is not enabled, do nothing
+            if not format_is_enabled then
+              return
+            end
+
+
+            if not is_prettier_formatting(client.id) then
+              vim.lsp.buf.format {
+                async = false,
+                filter = function(c)
+                  return c.id == client.id
+                end,
+              }
+              return
+            end
 
             prettier.format()
+
             -- if not in prettier, format file using lsp
           end,
+        })
+
+        -- Format dprint after saving the buffer
+        vim.api.nvim_create_autocmd("BufWritePost", {
+          group = get_augroup(client),
+          buffer = bufnr,
+          callback = function()
+            local cur_dir = vim.fn.getcwd()
+            local prettier = require("prettier")
+
+            prettier.format()
+            if file_exists(cur_dir .. '/dprint.json') then
+              vim.cmd("silent! dprint fmt %")
+              return
+            end
+          end
         })
       end,
     })

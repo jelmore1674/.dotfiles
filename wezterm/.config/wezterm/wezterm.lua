@@ -12,20 +12,30 @@ end
 config.term = "xterm-256color"
 config.font_size = 18.0
 config.enable_tab_bar = false
-config.window_decorations = "RESIZE"
+config.window_decorations = "TITLE|RESIZE"
 config.colors = {
 	cursor_bg = "#c7c7c7",
 }
-config.color_scheme = "iTerm2 Default"
-config.window_background_image = home .. "/.config/wezterm/background.png"
-config.window_background_opacity = 0.76
-config.window_background_image_hsb = {
-	hue = 1.0,
-	saturation = 1.0,
-	brightness = 0.1,
+-- config.color_scheme = "iTerm2 Default"
+config.background = {
+	{
+		source = {
+			File = home .. "/.config/wezterm/background4.png"
+		},
+		hsb = {
+			hue = 1,
+			saturation = 1,
+			brightness = 0.1
+		},
+		horizontal_align = "Center",
+		opacity = 0.86
+	}
 }
 
-config.text_background_opacity = 0.6
+config.text_background_opacity = 0.8
+
+
+
 
 -- and finally, return the configuration to wezterm
 return config
