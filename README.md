@@ -4,6 +4,8 @@
 
 - zsh
 - curl
+- go
+- fzf
 
 ## Install on-my-zsh
 
