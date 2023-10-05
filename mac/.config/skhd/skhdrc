@@ -78,3 +78,4 @@ alt - d : scratchpad --toggle discord
 alt - f : scratchpad --toggle finder
 alt - n : scratchpad --toggle logseq
 alt - b : scratchpad --toggle beekeeper
+alt - t : scratchpad --toggle wezterm

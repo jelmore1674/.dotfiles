@@ -45,3 +45,16 @@ position = [108, 67]
 size = [1224, 765]
 launch_type = "app"
 launch_command = "Logseq.app"
+
+[[scratchpad]]
+name = "wezterm"
+target_type = "title"
+target = "WezTermScratchPad"
+position = [108, 67]
+size = [1224, 765]
+launch_type = "app_with_arg"
+launch_command = [
+    "WezTerm.app",
+    "--config-file",
+    "Users/justin/.config/wezterm/scratch.lua",
+]
