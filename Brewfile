@@ -1,9 +1,13 @@
 tap "1password/tap"
 tap "adoptopenjdk/openjdk"
 tap "facebook/fb"
+tap "felixkratz/formulae"
 tap "fsouza/prettierd"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "homebrew/services"
+tap "koekeishiya/formulae"
+tap "omnisharp/omnisharp-roslyn"
 tap "sidneys/homebrew"
 tap "supabase/tap"
 # Automatic configure script builder
@@ -18,6 +22,8 @@ brew "cmake"
 brew "cocoapods"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Pluggable and configurable code formatting platform written in Rust
+brew "dprint"
 # Asynchronous event library
 brew "libevent"
 # Collection of reusable C++ library artifacts developed at Facebook
@@ -52,10 +58,16 @@ brew "gnupg"
 brew "pkg-config"
 # Improved top (interactive process viewer)
 brew "htop"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Terminal file manager
+brew "lf"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # General purpose TCP-IP emulator
 brew "libslirp"
+# Multi-platform support library with a focus on asynchronous I/O
+brew "libuv"
 # Language Server Protocol for Markdown
 brew "marksman"
 # Node version management
@@ -64,6 +76,12 @@ brew "n"
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Tiny, lightning fast, feature-packed file manager
+brew "nnn"
+# SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
+brew "openvpn"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
 # Object-relational database system
 brew "postgresql@14", restart_service: true
 # Interpreted, interactive, object-oriented programming language
@@ -78,27 +96,39 @@ brew "ruby@3.1"
 brew "shfmt"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Opinionated Lua code formatter
+brew "stylua"
 # Programmatically correct mistyped console commands
 brew "thefuck"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
 brew "tmux"
+# Configure transparent encryption of files in a Git repo
+brew "transcrypt"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Watch files and take action when they change
 brew "watchman"
 # Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
+# Hackable, minimal, fast TUI file explorer
+brew "xplr"
 # General-purpose lossless data-compression library
 brew "zlib"
 # A Powerful Command Line for automating iOS Simulators
 brew "facebook/fb/idb-companion"
 # prettier, on SPEED!
 brew "fsouza/prettierd/prettierd"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
+# Cross platform .NET development in the editor of your choice
+brew "omnisharp/omnisharp-roslyn/omnisharp"
 # Supabase CLI
 brew "supabase/tap/supabase"
-# Command-line helper for the 1Password password manager
+# Command-line interface for 1Password
 cask "1password-cli"
 # GraphQL client
 cask "altair-graphql-client"
@@ -108,8 +138,12 @@ cask "android-platform-tools"
 cask "beekeeper-studio"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Command-line display management utility
+cask "cscreen"
 # Web browser
 cask "firefox"
+# Developer targeted fonts with a high number of glyphs
+cask "font-hack-nerd-font"
 # Free and open-source image editor
 cask "gimp"
 # Web browser
@@ -124,6 +158,8 @@ cask "obs"
 cask "react-native-debugger"
 # File transfer application
 cask "transmit"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 vscode "aaron-bond.better-comments"
 vscode "aaronthomas.vscode-snazzy-operator"
 vscode "ahmadalli.vscode-nginx-conf"
@@ -174,6 +210,7 @@ vscode "mindaro-dev.file-downloader"
 vscode "morgan-codes.morgan-codes-vscode-theme"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-dotnettools.csharp"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
@@ -199,6 +236,7 @@ vscode "styled-components.vscode-styled-components"
 vscode "syler.sass-indented"
 vscode "tamasfe.even-better-toml"
 vscode "tauri-apps.tauri-vscode"
+vscode "tobias-z.vscode-harpoon"
 vscode "Tyriar.sort-lines"
 vscode "unifiedjs.vscode-mdx"
 vscode "usernamehw.errorlens"
