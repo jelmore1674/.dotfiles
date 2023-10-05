@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+DIR=$(pwd)
+
+brew bundle dump --describe
+mv Brewfile $HOME/.dotfiles
+
+cd $HOME/.dotfiles
+git add Brewfile
+git commit -m 'chore: update Brewfile'
+git push origin main
+cd $DIR
