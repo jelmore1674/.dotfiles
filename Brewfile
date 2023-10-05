@@ -60,8 +60,6 @@ brew "pkg-config"
 brew "htop"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Terminal file manager
-brew "lf"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # General purpose TCP-IP emulator
@@ -76,8 +74,6 @@ brew "n"
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Tiny, lightning fast, feature-packed file manager
-brew "nnn"
 # SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
 brew "openvpn"
 # Pinentry for GPG on Mac
@@ -150,8 +146,6 @@ cask "gimp"
 cask "google-chrome"
 # HTTP and GraphQL Client
 cask "insomnia"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Standalone app for debugging React Native apps
