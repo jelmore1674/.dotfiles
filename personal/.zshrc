@@ -81,6 +81,7 @@ export EDITOR="nvim"
 # Path to your oh-my-zsh installation.
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	export PATH="$PATH:$HOME/.local/bin"
+	export PATH=${HOME}/bin/:${HOME}/.local/scripts:${PATH}
 	export DPRINT_INSTALL="$HOME/.dprint"
 	export PATH="$DPRINT_INSTALL/bin:$PATH"
 	alias pbcopy='xclip -selection clipboard'
