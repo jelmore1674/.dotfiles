@@ -99,6 +99,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias vimdiff='nvim -d'
 alias vim="nvim"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias lg="lazygit"
 # alias opsign=eval $(op signin)
 
 # Scripts
