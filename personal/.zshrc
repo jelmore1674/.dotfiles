@@ -110,3 +110,4 @@ eval $(thefuck --alias)
 neofetch
 
 export GPG_TTY=$(tty)
+HELIX_RUNTIME=~/src/helix/runtime
