@@ -1,14 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 export ZSH="$HOME/.oh-my-zsh"
 
-# Path to your oh-my-zsh installation.
-# if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-# 	export ZSH="/home/justin/.oh-my-zsh"
-# elif [[ "$OSTYPE" == "darwin"* ]]; then
-# 	export ZSH="/Users/justin/.oh-my-zsh"
-# fi
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	if [[ $(command -v brew) ]]; then
+	else
+		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	fi
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -19,6 +18,7 @@ ZSH_THEME="agnoster"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -27,7 +27,6 @@ ZSH_THEME="agnoster"
 plugins=(git docker docker-compose git zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete rust thefuck ufw yarn tmux)
 source ~/.zsh_profile
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 
@@ -54,13 +53,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-prompt_context() {}
-
-# Dir: current working directory
-# prompt_dir() {
-#    prompt_segment blue black '%c'
-# }
-#
 prompt_context() {
 	if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
 		prompt_segment black default "%(!.%{%F{yellow}%}.)💀"
@@ -92,22 +84,38 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	export PATH="$DENO_INSTALL/bin:$PATH"
 	export PATH=${HOME}/bin/:${HOME}/.local/scripts:${PATH}
 fi
-# Created by `pipx` on 2023-08-17 21:03:33
 
 # Aliases
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias vimdiff='nvim -d'
-alias vim="nvim"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+# vim
+alias vim='nvim'
+alias vi='vim .'
+alias vo='nvim .'
+alias vimdiff='nvim -d'
+alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
+
 alias lg="lazygit"
-# alias opsign=eval $(op signin)
+
+# 1Password
+alias oplogin='eval $(op signin)'
+eval "$(op completion zsh)"
+compdef _op op
+source ~/.zsh_profile
+# tit alias
+alias tit=git
+# tmux
+alias ta="tmux attach"
+alias td="tmux detach"
 
 # Scripts
 alias tmux-sessionizer="~/.local/scripts/tmux-sessionizer.sh"
+alias tms='tmux-sessionizer'
+alias sshs='ssh-sessionizer.sh'
 alias wtpkg="~/.local/scripts/worktree-package-installer.sh"
 
 eval $(thefuck --alias)
-neofetch
-
-export GPG_TTY=$(tty)
 HELIX_RUNTIME=~/src/helix/runtime
+export GPG_TTY=$(tty)
+
+neofetch
