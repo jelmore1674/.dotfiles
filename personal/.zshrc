@@ -2,6 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
+if [[ -z "$TMUX" ]]; then
+	if tmux has-session 2>/dev/null; then
+		exec tmux attach
+	else
+		exec tmux
+	fi
+fi
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	if [[ $(command -v brew) ]]; then
 	else
@@ -17,7 +25,6 @@ ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
-
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
