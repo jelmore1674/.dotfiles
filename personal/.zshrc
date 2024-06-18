@@ -115,6 +115,10 @@ alias sshs='ssh-sessionizer.sh'
 alias wtpkg="~/.local/scripts/worktree-package-installer.sh"
 
 eval $(thefuck --alias)
+
+# Allow Ctrl + O
+stty discard undef
+
 HELIX_RUNTIME=~/src/helix/runtime
 export GPG_TTY=$(tty)
 
