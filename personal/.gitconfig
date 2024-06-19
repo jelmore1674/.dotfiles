@@ -80,3 +80,5 @@
 	repo = /Users/jelmore/Repos/marlonrichert/zsh-autocomplete
 
 
+[submodule]
+	recurse = true
