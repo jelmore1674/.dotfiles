@@ -11,7 +11,7 @@ echo "$session"
 
 # This helps prevent nesting of tmux windows
 if ! tmux has-session -t "$session_name" 2>/dev/null; then
-	tmux new-session -s "$session_name" -c "$session" -d
+  tmux new-session -s "$session_name" -c "$session" -d
 fi
 
 # Switch to the session.
