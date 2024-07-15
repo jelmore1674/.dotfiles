@@ -3,4 +3,5 @@
 **/ssh-sftp-connections
 **/authorized_keys
 lazygit/.config/lazygit/state.yml
+**/tmux/plugins/
 
