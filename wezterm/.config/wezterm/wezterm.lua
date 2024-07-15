@@ -9,34 +9,47 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.enable_wayland = false
+-- config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "tokyonight"
+-- config.color_scheme = "Moonfly (Gogh)"
+-- config.color_scheme = home .. "/.config/wezterm/colors/moonfly.toml"
 config.term = "xterm-256color"
+
 config.font_size = 18.0
+config.font = wezterm.font("JetBrains Mono")
 config.enable_tab_bar = false
-config.window_decorations = "TITLE|RESIZE"
+config.window_decorations = "RESIZE"
 config.colors = {
 	cursor_bg = "#c7c7c7",
 }
+
+config.macos_window_background_blur = 40
 -- config.color_scheme = "iTerm2 Default"
 config.background = {
 	{
 		source = {
-			File = home .. "/.config/wezterm/background.png"
+			File = home .. "/.config/wezterm/background.png",
 		},
 		hsb = {
 			hue = 0.99,
 			saturation = 0.94,
-			brightness = 0.1
+			brightness = 0.06,
 		},
 		horizontal_align = "Center",
-		opacity = 0.76
-	}
+		opacity = 1,
+	},
+}
+
+config.mouse_bindings = {
+	-- Ctrl-click will open the link under the mouse cursor
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "CTRL",
+		action = wezterm.action.OpenLinkAtMouseCursor,
+	},
 }
 
 config.text_background_opacity = 0.7
-
-
-
 
 -- and finally, return the configuration to wezterm
 return config
