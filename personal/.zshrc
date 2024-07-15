@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
-if [[ -z "$TMUX" ]]; then
-	if tmux has-session 2>/dev/null; then
-		exec tmux attach
-	else
-		exec tmux
-	fi
-fi
+# if [[ -z "$TMUX" ]]; then
+# 	if tmux has-session 2>/dev/null; then
+# 		exec tmux attach
+# 	else
+# 		exec tmux
+# 	fi
+# fi
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	if [[ $(command -v brew) ]]; then
