@@ -82,3 +82,5 @@
 
 [submodule]
 	recurse = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
