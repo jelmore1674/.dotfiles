@@ -121,6 +121,10 @@ alias tms='tmux-sessionizer'
 alias sshs='ssh-sessionizer.sh'
 alias wtpkg="~/.local/scripts/worktree-package-installer.sh"
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+
 eval $(thefuck --alias)
 
 # Allow Ctrl + O
