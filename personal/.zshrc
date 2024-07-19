@@ -121,6 +121,14 @@ alias tms='tmux-sessionizer'
 alias sshs='ssh-sessionizer.sh'
 alias wtpkg="~/.local/scripts/worktree-package-installer.sh"
 
+eval "$(zoxide init zsh)"
+
+alias cd="z"
+
+alias am="am.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
