@@ -74,7 +74,7 @@ prompt_dir() {
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit
 compinit -u
-export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/usr/local/opt/libpq/bin:$PATH:$HOME/go/bin"
 
 export EDITOR="nvim"
 # Path to your oh-my-zsh installation.
@@ -142,3 +142,4 @@ HELIX_RUNTIME=~/src/helix/runtime
 export GPG_TTY=$(tty)
 
 neofetch
+PROG=tea _CLI_ZSH_AUTOCOMPLETE_HACK=1 source "/Users/justin/Library/Application Support/tea/autocomplete.zsh"
