@@ -64,11 +64,19 @@ Q                       Quit np and Music.app
 				# 	art=$(clear; wezterm imgcat --position 0,0 --tmux-passthru enable --width 31 --height 14 ~/Library/Scripts/tmp.jpg)
 				# fi
 
-				if [ -f ~/Library/Scripts/tmp.png ]; then
-					art=$(clear; viu ~/Library/Scripts/tmp.png -w 31 -h 14)
+				if [ -f ~/.dotfiles/bin/Library/Scripts/tmp.png ]; then
+					art=$(clear; viu ~/.dotfiles/bin/Library/Scripts/tmp.png -w 31 -h 14)
 				else
-					art=$(clear; viu ~/Library/Scripts/tmp.jpg -w 31 -h 14)
+					art=$(clear; viu ~/.dotfiles/bin/Library/Scripts/tmp.jpg -w 31 -h 14)
 				fi
+
+				# if [ -f ~/Library/Scripts/tmp.png ]; then
+				# 	art=$(clear; viu ~/Library/Scripts/tmp.png -w 31 -h 14)
+				# else
+				# 	art=$(clear; viu ~/Library/Scripts/tmp.jpg -w 31 -h 14)
+				# fi
+
+
 			fi
 			cyan=$(echo -e '\e[00;36m')
 			magenta=$(echo -e '\033[01;35m')

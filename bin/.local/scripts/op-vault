@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Arista Vault
+VAULT_ID="hee7c67wcs7ufmvuzt22rzalkq"
+VAULT_ANSIBLE_NAME="Ansible Vault"
+
+op item get --format json --vault=$VAULT_ID "$VAULT_ANSIBLE_NAME" | jq '.fields[] | select(.id=="password").value' | tr -d '"'
