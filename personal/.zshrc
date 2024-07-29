@@ -143,3 +143,6 @@ export GPG_TTY=$(tty)
 
 neofetch
 PROG=tea _CLI_ZSH_AUTOCOMPLETE_HACK=1 source "/Users/justin/Library/Application Support/tea/autocomplete.zsh"
+
+# Created by `pipx` on 2024-07-29 05:04:40
+export PATH="$PATH:/Users/justin/.local/bin"
