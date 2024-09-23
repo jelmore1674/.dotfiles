@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-session=$(awk '$1 ~ /^Host$/ {print $2}' <~/.ssh/config | fzf --reverse)
+session=$(awk '$1 ~ /^Host$/ {print $2}' <~/.ssh/config | fzf --reverse --tmux)
 
 session_name=$(basename "$session" | tr . _)
 
