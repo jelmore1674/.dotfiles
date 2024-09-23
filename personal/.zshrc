@@ -31,7 +31,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose git zsh-autosuggestions macos fast-syntax-highlighting zsh-autocomplete rust thefuck ufw yarn tmux)
+plugins=(docker docker-compose git zsh-autosuggestions macos fast-syntax-highlighting zsh-autocomplete rust thefuck yarn tmux ansible gh ssh podman 1password)
 source ~/.zsh_profile
 source $ZSH/oh-my-zsh.sh
 
@@ -93,7 +93,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 # Aliases
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+# alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # vim
 alias vim='nvim'
@@ -101,13 +101,13 @@ alias vi='vim .'
 alias vo='nvim .'
 alias vimdiff='nvim -d'
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
-
 alias lg="lazygit"
 
 # 1Password
 alias oplogin='eval $(op signin)'
 eval "$(op completion zsh)"
 compdef _op op
+
 source ~/.zsh_profile
 # tit alias
 alias tit=git
@@ -120,14 +120,14 @@ alias tmux-sessionizer="~/.local/scripts/tmux-sessionizer.sh"
 alias tms='tmux-sessionizer'
 alias sshs='ssh-sessionizer.sh'
 alias wtpkg="~/.local/scripts/worktree-package-installer.sh"
+alias am="am.sh"
 
 eval "$(zoxide init zsh)"
 
 alias cd="z"
 
-alias am="am.sh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -138,11 +138,13 @@ eval $(thefuck --alias)
 # Allow Ctrl + O
 stty discard undef
 
-HELIX_RUNTIME=~/src/helix/runtime
 export GPG_TTY=$(tty)
 
-neofetch
-PROG=tea _CLI_ZSH_AUTOCOMPLETE_HACK=1 source "/Users/justin/Library/Application Support/tea/autocomplete.zsh"
+fastfetch
 
 # Created by `pipx` on 2024-07-29 05:04:40
 export PATH="$PATH:/Users/justin/.local/bin"
+export HEADSCALE_URL=https://hs.justinelmore.dev
+
+# setopt completealiases
+# autoload -U compinit; compinit

@@ -2,10 +2,13 @@
 	name = Justin Elmore
 	email = jelmore1674@pm.me
 	signingkey = jelmore1674@pm.me
+
 [init]
 	defaultBranch = main
+
 [color]
 	ui = auto
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -14,19 +17,24 @@
 [core]
 	autocrlf = input
 	editor = nvim
+	pager = delta
+	excludesfile = ~/.gitignore_global
 
 [diff]
 	tool = nvimdiff
+	colorMoved = default
+
 [difftool]
 	prompt = false
+
+[interactive]
+	diffFilter = delta --color-only
+
+[merge]
+	conflictstyle = diff3
+
 [alias]
 	d = difftool
-
-[commit]
-	gpgsign = true
-
-[tag]
-	gpgSign = true
 
 ## GPG Key Signing
 [commit]
@@ -35,52 +43,25 @@
 [tag]
 	gpgSign = true
 
-[init]
-	defaultBranch = main
-
-[color]
-	ui = auto
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-
-[core]
-	autocrlf = input
-	editor = nvim
-	pager = delta
-	excludesfile = /Users/jelmore/.gitignore_global
-
 [delta]
-    navigate = true
-    side-by-side = true
-    line-numbers-right-format = "│ "
-    line-numbers-left-format = ''
+	navigate = true
+	side-by-side = true
+	line-numbers-right-format = "│ "
+	line-numbers-left-format = ''
 
-[diff]
-	tool = nvim
-	colorMoved = default
-
-[difftool]
-	prompt = false
-
-[alias]
-	d = difftool
-
-[merge]
-	conflictstyle = diff3
-
-[interactive]
-    diffFilter = delta --color-only
+[gpg]
+	program = /opt/homebrew/bin/gpg
 
 [maintenance]
-	repo = /Users/jelmore/Repos/znap
-	repo = /Users/jelmore/Repos/marlonrichert/zsh-autocomplete
-
+	repo = ~/Repos/znap
+	repo = ~/Repos/marlonrichert/zsh-autocomplete
 
 [submodule]
 	recurse = true
-[gpg]
-	program = /opt/homebrew/bin/gpg
+
+
+
+
+
+
+
