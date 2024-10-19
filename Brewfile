@@ -1,28 +1,22 @@
 tap "1password/tap"
 tap "adoptopenjdk/openjdk"
 tap "aiotter/htop-vim"
+tap "eddieantonio/eddieantonio"
 tap "facebook/fb"
 tap "felixkratz/formulae"
 tap "fsouza/prettierd"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
+tap "jorgerojas26/lazysql"
 tap "koekeishiya/formulae"
+tap "nikitabobko/tap"
+tap "omnisharp/omnisharp-roslyn"
 tap "sidneys/homebrew"
 tap "supabase/tap"
-# TIFF library and utilities
-brew "libtiff"
-# Color management engine supporting ICC profiles
-brew "little-cms2"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
-# New file format for still image compression
-brew "jpeg-xl"
-# Codec library for encoding and decoding AV1 video streams
-brew "aom"
+tap "zegervdv/zathura"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -31,18 +25,40 @@ brew "automake"
 brew "bat"
 # Collection of portable C++ source libraries
 brew "boost"
+# Freely available high-quality data compressor
+brew "bzip2"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # Cross-platform make
 brew "cmake"
-# YAML Parser
-brew "libyaml"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-# Pluggable and configurable code formatting platform written in Rust
-brew "dprint"
 # Asynchronous event library
 brew "libevent"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# General purpose TCP-IP emulator
+brew "libslirp"
+# Generic machine emulator and virtualizer
+brew "qemu"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima", restart_service: true
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Simple Authentication and Security Layer
+brew "cyrus-sasl"
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
+# Bash, Zsh and Fish completion for Docker
+brew "docker-completion"
+# Isolated development environments using Docker
+brew "docker-compose"
+# Platform keystore credential helper for Docker
+brew "docker-credential-helper"
+# Tools for browsing and manipulating docker registries
+brew "docker-ls"
+# Pluggable and configurable code formatting platform written in Rust
+brew "dprint"
 # Collection of reusable C++ library artifacts developed at Facebook
 brew "folly"
 # C++14 implementation of the TLS-1.3 standard
@@ -55,32 +71,12 @@ brew "fbthrift"
 brew "fb303"
 # Shared library for Watchman and Eden projects
 brew "edencommon"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
-# OpenType text shaping engine
-brew "harfbuzz"
-# Library for JPEG-2000 image manipulation
-brew "openjpeg"
-# Multi-format archive and compression library
-brew "libarchive"
-# Subtitle renderer for the ASS/SSA subtitle format
-brew "libass"
-# Reliable Internet Stream Transport (RIST)
-brew "librist"
-# Framework for layout and rendering of i18n text
-brew "pango"
-# OCR (Optical Character Recognition) engine
-brew "tesseract"
-# Play, record, convert, and stream audio and video
-brew "ffmpeg"
-# Create thumbnails for your video files
-brew "ffmpegthumbnailer"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# GNU compiler collection
-brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -89,135 +85,131 @@ brew "git"
 brew "git-crypt"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
-# Extensions to follow Vincent Driessen's branching model
-brew "git-flow"
 # Git extension for versioning large files
 brew "git-lfs"
-# X.509 and CMS library
-brew "libksba"
+# Open-source GitLab command-line tool
+brew "glab"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Fast linters runner for Go
+brew "golangci-lint"
+# Kubernetes package manager
+brew "helm"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# CLI wrapper for basic network utilities on macOS - ip command
+brew "iproute2mac"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Development kit for the Java programming language
-brew "openjdk"
-# Statically typed programming language for the JVM
-brew "kotlin"
-# Network authentication protocol
-brew "krb5"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Lazier way to manage everything docker
+brew "lazydocker"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Terminal file manager
-brew "lf"
-# General purpose TCP-IP emulator
-brew "libslirp"
-# Generic library support script
-brew "libtool"
-# Language Server Protocol for Markdown
-brew "marksman"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# SIXEL encoder/decoder implementation
+brew "libsixel"
+# Multi-platform support library with a focus on asynchronous I/O
+brew "libuv"
+# Clone of ls with colorful output, file type icons, and more
+brew "lsd"
 # Nice to use pager for humans
 brew "moar"
 # Node version management
 brew "n"
-# Fast, highly customisable system info script
-brew "neofetch"
-# E-mail reader with support for Notmuch, NNTP and much more
-brew "neomutt"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Tiny, lightning fast, feature-packed file manager
-brew "nnn"
-# Platform built on V8 to build network applications
-brew "node", link: false
-# Optimized BLAS library
-brew "openblas"
-# Package for scientific computing with Python
-brew "numpy"
-# Open source suite of directory software
-brew "openldap"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
-# Open Visual Inference And Optimization toolkit for AI inference
-brew "openvino"
+# Data loading tool for PostgreSQL
+brew "pgloader"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Manage compile and link flags for libraries
-brew "pkg-config"
-# Object-relational database system
-brew "postgresql@14", restart_service: true
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Tool for managing OCI containers and pods
+brew "podman"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
-# Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-# Generic machine emulator and virtualizer
-brew "qemu"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby@3.1"
-# Autoformat shell script source code
-brew "shfmt"
+# Non-interactive SSH password auth
+brew "sshpass"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Opinionated Lua code formatter
 brew "stylua"
 # Programmatically correct mistyped console commands
 brew "thefuck"
-# Simplified and community-driven man pages
-brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Pager/text based browser
-brew "w3m"
+# Simple terminal image viewer written in Rust
+brew "viu"
 # Watch files and take action when they change
 brew "watchman"
+# Internet file retriever
+brew "wget"
 # Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
-# Hackable, minimal, fast TUI file explorer
-brew "xplr"
 # Blazing fast terminal file manager written in Rust, based on async I/O
-brew "yazi"
+brew "yazi", args: ["HEAD"]
 # General-purpose lossless data-compression library
 brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # htop with vim keybindings
 brew "aiotter/htop-vim/htop-vim", args: ["HEAD"]
-# A Powerful Command Line for automating iOS Simulators
-brew "facebook/fb/idb-companion"
-# prettier, on SPEED!
-brew "fsouza/prettierd/prettierd", link: false
-# Simple hotkey-daemon for macOS.
-brew "koekeishiya/formulae/skhd"
+brew "jorgerojas26/lazysql/lazysql"
+# Interface library
+brew "zegervdv/zathura/girara", args: ["HEAD"]
+# PDF viewer
+brew "zegervdv/zathura/zathura", link: false
+# MuPDF backend plugin for zathura
+brew "zegervdv/zathura/zathura-pdf-mupdf"
+# Poppler backend plugin for zathura
+brew "zegervdv/zathura/zathura-pdf-poppler"
 # Command-line interface for 1Password
 cask "1password-cli"
+# GraphQL client
+cask "altair-graphql-client"
 # Android SDK component
 cask "android-platform-tools"
 # Cross platform SQL editor and database management app
 cask "beekeeper-studio"
 # Web browser focusing on privacy
 cask "brave-browser"
-# Web browser
-cask "firefox"
+# Voice and text chat software
+cask "discord"
+# Developer platform
+cask "dotnet-sdk"
 cask "font-hack-nerd-font"
-# Web browser
-cask "google-chrome"
+# Free and open-source image editor
+cask "gimp"
 # HTTP and GraphQL Client
-cask "insomnia"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
-# Open-source keystroke visualiser
-cask "keycastr"
-# Standalone app for debugging React Native apps
-cask "react-native-debugger"
+cask "insomnium"
+# Privacy-first, open-source platform for knowledge sharing and management
+cask "logseq"
+# Unofficial desktop client for F1TV
+cask "multiviewer-for-f1"
+# VPN client focusing on security
+cask "protonvpn"
 # File transfer application
 cask "transmit"
+# Terminal emulator
+cask "wave"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+vscode "1password.op-vscode"
 vscode "aaron-bond.better-comments"
 vscode "aaronthomas.vscode-snazzy-operator"
 vscode "ahmadalli.vscode-nginx-conf"
@@ -256,16 +248,14 @@ vscode "foxundermoon.shell-format"
 vscode "fwcd.kotlin"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
+vscode "golang.go"
 vscode "grapecity.gc-excelviewer"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-execution"
 vscode "graphql.vscode-graphql-syntax"
-vscode "jevakallio.vscode-live-frame"
 vscode "kreativ-software.csharpextensions"
 vscode "ldez.ignore-files"
-vscode "lightyen.tailwindcss-intellisense-twin"
 vscode "mattconde.vscode-snazz-theme"
-vscode "mblode.twig-language-2"
 vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
 vscode "mindaro-dev.file-downloader"
@@ -288,19 +278,19 @@ vscode "oderwat.indent-rainbow"
 vscode "paulshen.paul-typescript-toolkit"
 vscode "pkief.material-icon-theme"
 vscode "prisma.prisma"
-vscode "rangav.vscode-thunder-client"
 vscode "redhat.vscode-yaml"
-vscode "risabhrai.blue-moon"
 vscode "ritwickdey.liveserver"
 vscode "rust-lang.rust-analyzer"
 vscode "shakram02.bash-beautify"
 vscode "stackbreak.comment-divider"
 vscode "steoates.autoimport"
 vscode "styled-components.vscode-styled-components"
+vscode "stylelint.vscode-stylelint"
 vscode "syler.sass-indented"
 vscode "tamasfe.even-better-toml"
 vscode "tauri-apps.tauri-vscode"
 vscode "tobias-z.vscode-harpoon"
+vscode "tompollak.lazygit-vscode"
 vscode "tyriar.sort-lines"
 vscode "unifiedjs.vscode-mdx"
 vscode "usernamehw.errorlens"
@@ -310,7 +300,6 @@ vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vscodevim.vim"
 vscode "wallabyjs.quokka-vscode"
 vscode "william-voyek.vscode-nginx"
-vscode "wix.vscode-import-cost"
 vscode "yzhang.markdown-all-in-one"
 vscode "zhuangtongfa.material-theme"
 vscode "ziyasal.vscode-open-in-github"
