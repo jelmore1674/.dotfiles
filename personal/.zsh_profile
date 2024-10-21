@@ -4,7 +4,7 @@ bindkey -s ^o 'eval $(op signin)^M'
 
 
 # tmux-attach
-bindkey -s ^a "tmux attach\n"
+#bindkey -s ^a "tmux attach\n"
 
 # tmux-detach
-bindkey -s ^d "tmux detach\n"
+#bindkey -s ^d "tmux detach\n"
