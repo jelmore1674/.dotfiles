@@ -33,7 +33,7 @@ config.background = {
 		hsb = {
 			hue = 0.99,
 			saturation = 0.94,
-			brightness = 0.06,
+			brightness = 0.04,
 		},
 		horizontal_align = "Center",
 		opacity = 1,
@@ -49,7 +49,7 @@ config.mouse_bindings = {
 	},
 }
 
-config.text_background_opacity = 0.7
+-- config.text_background_opacity = 0.7
 
 -- and finally, return the configuration to wezterm
 return config
