@@ -1,3 +1,6 @@
+[include]
+	path =	~/.dotfiles/personal/themes.gitconfig
+
 [user]
 	name = Justin Elmore
 	email = jelmore1674@pm.me
@@ -9,23 +12,26 @@
 [color]
 	ui = auto
 
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
 [core]
 	autocrlf = input
 	editor = nvim
 	pager = delta
 	excludesfile = ~/.gitignore_global
 
+
+## Diff
 [diff]
 	tool = nvimdiff
 	colorMoved = default
 
 [difftool]
 	prompt = false
+
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers-right-format = "│ "
+	line-numbers-left-format = ''
 
 [interactive]
 	diffFilter = delta --color-only
@@ -43,12 +49,6 @@
 [tag]
 	gpgSign = true
 
-[delta]
-	navigate = true
-	side-by-side = true
-	line-numbers-right-format = "│ "
-	line-numbers-left-format = ''
-
 [gpg]
 	program = /opt/homebrew/bin/gpg
 
@@ -58,10 +58,5 @@
 
 [submodule]
 	recurse = true
-
-
-
-
-
 
 
