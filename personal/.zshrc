@@ -122,11 +122,6 @@ alias sshs='ssh-sessionizer.sh'
 alias wtpkg="~/.local/scripts/worktree-package-installer.sh"
 alias am="am.sh"
 
-eval "$(zoxide init zsh)"
-
-alias cd="z"
-
-
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set up fzf key bindings and fuzzy completion
@@ -144,7 +139,14 @@ fastfetch
 
 # Created by `pipx` on 2024-07-29 05:04:40
 export PATH="$PATH:/Users/justin/.local/bin"
-export HEADSCALE_URL=https://hs.justinelmore.dev
 
-# setopt completealiases
-# autoload -U compinit; compinit
+eval "$(zoxide init zsh)"
+alias cd="z"
+
+# MOAR config
+export MOAR='--statusbar=bold --no-linenumbers'
+#
+# XDG Home
+export XDG_CONFIG_HOME="$HOME/.config"
+
+
