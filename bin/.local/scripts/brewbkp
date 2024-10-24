@@ -1,22 +1,3 @@
 #!/usr/bin/env bash
 
-DIR=$(pwd)
-BREW_DIR=$HOME/.dotfiles/$1
-
-echo "$HOME"/.dotfiles
-
-brew bundle dump --describe
-mv Brewfile "$BREW_DIR"
-cd "$BREW_DIR" || exit
-git add Brewfile
-git commit -m 'chore: update Brewfile'
-git push origin main
-
-if [[ "$1" == "work" ]]; then
-  cd "$HOME"/.dotfiles || exit
-  git add work
-  git commit -m 'chore: update work'
-  git push origin main
-fi
-
-cd "$DIR" || exit
+brew bundle dump --describe -f
