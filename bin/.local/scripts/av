@@ -1,11 +1,3 @@
-TMP=$(mktemp)
-LOGGED_IN=$(op whoami 2>"$TMP")
-err=$(cat "$TMP")
-LOGGED_IN=$(echo "$err" | rg "ERROR")
+#!/bin/bash
 
-if [[ -n $LOGGED_IN ]]; then
-  echo "Signing in..."
-  eval "$(op signin)"
-fi
-
-ansible-vault $1 $2  --vault-pass-file=~/.local/scripts/op-vault
+ansible-vault $1 $2 --vault-pass-file=~/.local/scripts/op-vault

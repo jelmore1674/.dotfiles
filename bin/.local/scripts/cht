@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-languages=$(echo "javascript typescript rust bash git csharp react-native" | tr " " "\n")
+languages=$(echo "javascript typescript rust bash git csharp react-native go" | tr " " "\n")
 core_utils=$(echo "alias awk chmod chown find grep less ln mv sed tail xargs" | tr " " "\n")
 selected=$(echo -e "$languages\n$core_utils" | fzf)
 

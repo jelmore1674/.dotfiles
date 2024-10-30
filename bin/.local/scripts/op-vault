@@ -1,9 +1,3 @@
 #!/bin/bash
 
-# Arista Vault
-VAULT_ID="hee7c67wcs7ufmvuzt22rzalkq"
-VAULT_ANSIBLE_NAME="Ansible Vault"
-
-# op item get --format json --vault=$VAULT_ID "$VAULT_ANSIBLE_NAME" | jq '.fields[] | select(.id=="password").value' | tr -d '"'
-
-op read "op://Private/Ansible Vault/password"
+op read --account my.1password.com "op://Private/Ansible Vault/password"
