@@ -1,13 +1,15 @@
 services:
-    "gitlab.justinelmore.dev": "gitlab:gitlab.justinelmore.dev"
+  "gitlab.justinelmore.dev": "gitlab:gitlab.justinelmore.dev"
 gui:
-    sidePanelWidth: 0.3 # gives more space to show side-by-side diff
+  sidePanelWidth: 0.3 # gives more space to show side-by-side diff
 git:
-    paging:
-        colorArg: always
-        pager: delta --dark --paging=never --syntax-theme Coldark-Dark -s
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never --syntax-theme Coldark-Dark -s
 customCommands:
-    - key: "F"
-      command: "git fetch --prune"
-      context: "localBranches"
-      stream: true
+  - key: "F"
+    command: "git fetch --prune"
+    context: "localBranches"
+    stream: true
+os:
+  openLink: open "$(echo "{{link}}" | sed 's/%2F/\//g')"
