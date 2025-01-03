@@ -1,5 +1,7 @@
 services:
   "gitlab.justinelmore.dev": "gitlab:gitlab.justinelmore.dev"
+  "forgejo.justinelmore.dev": "gitea:forgejo.justinelmore.dev"
+  "git.justinelmore.dev": "gitea:git.justinelmore.dev"
 gui:
   sidePanelWidth: 0.3 # gives more space to show side-by-side diff
 git:
@@ -12,4 +14,4 @@ customCommands:
     context: "localBranches"
     stream: true
 os:
-  openLink: open "$(echo "{{link}}" | sed 's/%2F/\//g')"
+  openLink: open -n "$(echo {{link}} | sed 's/%2F/\//g')"
