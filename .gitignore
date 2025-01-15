@@ -7,3 +7,4 @@ lazygit/.config/lazygit/state.yml
 *.log
 tmp.*g
 
+lazygit/Library/Application Support/lazygit/state.yml
