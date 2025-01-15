@@ -142,11 +142,12 @@ export PATH="$PATH:/Users/justin/.local/bin"
 
 eval "$(zoxide init zsh)"
 alias cd="z"
+alias cat="bat --paging=never --style=plain"
+
+PROG=tea _CLI_ZSH_AUTOCOMPLETE_HACK=1 source "$XDG_CONFIG_HOME/tea/autocomplete.zsh"
 
 # MOAR config
 export MOAR='--statusbar=bold --no-linenumbers'
 #
 # XDG Home
 export XDG_CONFIG_HOME="$HOME/.config"
-
-
