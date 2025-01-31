@@ -1,0 +1,9 @@
+theme = wez
+font-family = "JetBrains Mono"
+font-size = 18
+background-opacity = 0.8
+macos-titlebar-style = hidden
+macos-non-native-fullscreen = visible-menu
+window-height = 45
+window-width = 150
+term = xterm-256color
