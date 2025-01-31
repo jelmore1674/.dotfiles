@@ -2,13 +2,19 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
-# if [[ -z "$TMUX" ]]; then
-# 	if tmux has-session 2>/dev/null; then
-# 		exec tmux attach
-# 	else
-# 		exec tmux
-# 	fi
-# fi
+source ~/.zsh_profile
+
+# XDG Home
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# Always start in tmux
+if [[ -z "$TMUX" ]]; then
+	if tmux has-session 2>/dev/null; then
+		exec tmux attach
+	else
+		exec tmux
+	fi
+fi
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	if [[ $(command -v brew) ]]; then
@@ -31,7 +37,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker docker-compose git zsh-autosuggestions macos fast-syntax-highlighting zsh-autocomplete rust thefuck yarn tmux ansible gh ssh podman 1password)
+plugins=(docker docker-compose git zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete rust ansible gh ssh podman 1password)
 source ~/.zsh_profile
 source $ZSH/oh-my-zsh.sh
 
@@ -92,8 +98,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	export PATH=${HOME}/bin/:${HOME}/.local/scripts:${PATH}
 fi
 
-# Aliases
-# alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # vim
 alias vim='nvim'
@@ -108,7 +112,6 @@ alias oplogin='eval $(op signin)'
 eval "$(op completion zsh)"
 compdef _op op
 
-source ~/.zsh_profile
 # tit alias
 alias tit=git
 # tmux
@@ -121,6 +124,8 @@ alias tms='tmux-sessionizer'
 alias sshs='ssh-sessionizer.sh'
 alias wtpkg="~/.local/scripts/worktree-package-installer.sh"
 alias am="am.sh"
+
+alias k="kubectl"
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -144,10 +149,8 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 alias cat="bat --paging=never --style=plain"
 
+
 PROG=tea _CLI_ZSH_AUTOCOMPLETE_HACK=1 source "$XDG_CONFIG_HOME/tea/autocomplete.zsh"
 
 # MOAR config
 export MOAR='--statusbar=bold --no-linenumbers'
-#
-# XDG Home
-export XDG_CONFIG_HOME="$HOME/.config"
